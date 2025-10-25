@@ -1,0 +1,75 @@
+Arreglo (array):
+
+Es una estructura de datos estática.
+
+Su tamaño se define en tiempo de compilación y no puede cambiar.
+
+La memoria se gestiona manualmente.
+
+No tiene métodos, se accede a los elementos por índice.
+
+No verifica los límites del acceso (puede causar errores si se accede fuera del rango).
+
+Es más rápido, pero menos flexible.
+
+Se recomienda usarlo cuando el tamaño de los datos es fijo y conocido.
+
+Vector (std::vector):
+
+Es un contenedor dinámico de la biblioteca estándar (STL).
+
+Puede cambiar de tamaño durante la ejecución (crecer o disminuir).
+
+La memoria se gestiona automáticamente.
+
+Tiene métodos útiles como .push_back(), .size(), .at(), .clear(), entre otros.
+
+El método .at() verifica los límites y puede lanzar excepciones si hay un error.
+
+Es un poco más lento que un arreglo, pero mucho más seguro y versátil.
+
+Se recomienda cuando no se conoce la cantidad exacta de elementos que se van a almacenar.
+
+Diferencia entre un vector tradicional y un vector de clase en C++
+
+Vector tradicional:
+
+Se declara fuera de cualquier clase, normalmente en el main o en una función.
+
+No tiene encapsulamiento ni control de acceso.
+
+Se manipula directamente con índices o iteradores.
+
+Se utiliza en programas estructurados o simples.
+
+Es rápido y directo, pero menos organizado.
+
+Ejemplo:
+
+vector<int> numeros;
+numeros.push_back(5);
+
+
+Vector de clase:
+
+Se declara como un atributo dentro de una clase.
+
+Tiene encapsulamiento: se accede mediante métodos get y set.
+
+Puede estar protegido por modificadores de acceso (private, protected, public).
+
+Se usa en programación orientada a objetos (POO).
+
+Mejora la seguridad, modularidad y reutilización del código.
+
+Ejemplo:
+
+class Alumno {
+private:
+    vector<int> notas;
+public:
+    void agregarNota(int n) { notas.push_back(n); }
+    void mostrarNotas() {
+        for (int nota : notas) cout << nota << " ";
+    }
+};
