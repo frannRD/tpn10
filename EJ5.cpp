@@ -42,7 +42,7 @@ int main() {
         empleados.push_back(e);
     }
 
-    // Ordenar de mayor a menor salario
+    
     for (int i = 0; i < empleados.size() - 1; i++) {
         for (int j = i + 1; j < empleados.size(); j++) {
             if (empleados[i].getSalario() < empleados[j].getSalario()) {
